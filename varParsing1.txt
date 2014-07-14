@@ -1,0 +1,15 @@
+
+#-------------- varParsing block 1 -------------------------
+from FWCore.ParameterSet.VarParsing import VarParsing
+
+options = VarParsing ('analysis')
+
+#process.load("FWCore.MessageService.MessageLogger_cfi")
+
+options.register ('eventsToProcess',
+                                  '',
+                                  VarParsing.multiplicity.list,
+                                  VarParsing.varType.string,
+                                  "Events to process")
+options.parseArguments()
+#------------------------------------------------------------

@@ -1,0 +1,7 @@
+<MGParamCMS>
+             5 = nqmatch    ! Max Jet Flavor
+             3 = maxjets    ! Largest number (inclusive ktMLM matching multipl.)
+             0 = minjets    ! Smallest number of additional light flavour jets
+           5.0 = etaclmax   ! Maximum pseudorapidity for particles to cluster
+          20.0 = qcut       ! Jet matching threshold for ktMLM scheme
+</MGParamCMS>

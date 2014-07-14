@@ -1,0 +1,12 @@
+universe = vanilla
+Executable = genMCjob.sh
+Requirements = Memory >= 199 &&OpSys == "LINUX"&& (Arch != "DUMMY" )&& Disk > 1000000
+Should_Transfer_Files = YES
+Transfer_Input_Files = Configuration/Generator/python/Hadronizer_MgmMatchTuneZ2star_8TeV_madgraph_tauola_cff.py, data/Preprocessed/Delphes/8TeV/hxx_8TeV_500GeV.lhe, simple_PAT_MC_cfg.py, varParsing1.txt
+WhenToTransferOutput = ON_EXIT
+Output = out_$(Cluster)_$(Process).stdout
+Error = out_$(Cluster)_$(Process).stderr
+Log = out_$(Cluster)_$(Process).log
+Arguments = $(Cluster) $(Process)
+Queue 1
+
